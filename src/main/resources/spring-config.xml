@@ -5,19 +5,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd">
 
-    <bean name="student-repository"
-          class="com.hillel.university.repository.StudentsRepositoryImpl">
-    </bean>
+    <context:annotation-config/>
 
-    <bean name="student-repository-second"
-          class="com.hillel.university.repository.StudentRepositorySecondImpl">
-    </bean>
-
-    <bean name="student-service"
-          class="com.hillel.university.service.StudentServiceImpl"
-          autowire="byType">
-        <!--<property name="studentRepository" ref="student-repository"/>-->
-        <!--<constructor-arg index="0" ref="student-repository"/>-->
-    </bean>
+    <context:component-scan base-package="com.hillel.university"/>
 
 </beans>

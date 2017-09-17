@@ -1,10 +1,12 @@
 package com.hillel.university.repository;
 
 import com.hillel.university.model.Student;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository("student-repository")
 public class StudentsRepositoryImpl implements StudentRepository {
 
     @Override
